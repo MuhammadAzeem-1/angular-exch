@@ -541,9 +541,9 @@
   display: none;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .game-section{
-    width: 22rem;
+    width: 25rem;
     height: 17rem;
   }
 
@@ -746,4 +746,13 @@
   font-size: 14px;
   color: gray;
 }
+}
+
+
+@media (max-width: 400px) {
+  .game-section{
+    width: 22rem;
+    height: 17rem;
+  }
+
 }

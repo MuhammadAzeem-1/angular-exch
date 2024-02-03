@@ -60,7 +60,7 @@
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .mobile-view-nav{
         display: inline-block;
         width: 92.5%;
@@ -80,7 +80,7 @@
         color: white;
         height: 2rem;
         padding: 9px;
-        width: 102%;
+        width: 103%;
         border-top: 2px solid #919191;
         border-left: 2px solid #919191;
         border-right: 2px solid #919191;
@@ -123,4 +123,12 @@
     }
 
     
+  }
+
+  @media (max-width: 400px) {
+
+    .mobile-view-nav-section{
+       
+        width: 102%;
+    }
   }

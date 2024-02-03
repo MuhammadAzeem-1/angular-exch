@@ -1,0 +1,191 @@
+.royal-section{
+    background: #222;
+    border-radius: 7.523px;
+    /* width: 100%; */
+}
+
+.royal-header-section{
+    background-image: url(https://game.royalgaming.online/static/media/sidebar-logo-bg.2d7f33113ca5cb39bf0e.svg);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 7px;
+    width: 22.5rem;
+    border-radius: 7px;
+    gap: 3rem;
+}
+
+.royal-header-section-a{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #cf8d2e;
+    padding: 3px 9px;
+    border-radius: 8px;
+    margin-left: 12px;
+    gap: 3px;
+}
+
+.royal-header-section-a p {
+    color: #fff;
+    font-family: Roboto Condensed,sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    margin: 0;
+    margin: 0;
+}
+
+.royal-header-section-b img{
+
+  height: 4.7rem;
+  /* width: 7.6rem; */
+  object-fit: fill;
+  
+}
+
+.tab-search-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3px;
+}
+
+.tab-section{
+    background-color: black;
+    padding: 5px;
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    width: 89%;
+    height: 2rem;
+    align-items: center;
+}
+
+
+.tab-section button{
+    background: #515151;
+    color: #fff;
+    font-family: Roboto Condensed,sans-serif;
+    font-size: 8px;
+    font-weight: 500;
+    text-transform: uppercase;
+    height: 30px;
+    margin-right: 5px;
+    min-height: 30px;
+    padding: 0;
+    width: 31%;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.tab-section button:hover{
+     background-color: #cf8d2e;
+}
+
+/* css */
+
+/* search-box.component.css */
+.search-container {
+    display: flex;
+     margin: 3px;
+     width: 90%;
+  }
+  
+  .search-input {
+    padding: 8px 22px 7px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #515151;
+    border-radius: 4px;
+    background-color: black;
+    font-size: 15px;
+    font-weight: 700;
+    /* opacity: 0.4; */
+    /* color: crimson; */
+    color: #222222;
+  }
+  
+  .search-button {
+    position: absolute;
+    left: 21%;
+    top: 32%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    font-size: 17px;
+  }
+  
+  .search-button img {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+
+  .royal-games-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .royal-games-card-section{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .card{
+    padding: 7px;
+  }
+
+  .card:hover{
+    border: 1px solid #a39700;
+    border-radius: 15px;
+    
+  }
+
+  .card img{
+    width: 10rem;
+    border-radius: 21px;
+    cursor: pointer;
+
+  }
+
+  .card-content{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card-content-member{
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.2rem;
+  }
+
+  .card-content-member img{
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  .card-content p{
+    margin: 0;
+    color: white;
+    font-family: Roboto Condensed,sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 17px;
+    margin: 0;
+  }
+
+
+  @media (max-width: 400px) {
+    .royal-section{
+      display: none;
+    }
+  }

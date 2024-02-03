@@ -1,0 +1,47 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+
+@Component({
+  selector: 'app-gaming-section',
+  standalone: true,
+  imports: [
+    FontAwesomeModule,
+    CommonModule
+  ],
+  templateUrl: './gaming-section.component.html',
+  styleUrl: './gaming-section.component.css'
+})
+export class GamingSectionComponent {
+  isGameActive : boolean = false;
+  isDataActive: any = false;
+  isBetActive: any = false;
+  selectedPlayerIndex: number | null = null
+
+  faXmark= faXmark;
+
+
+   playerData:any = [
+    {
+      name: "Player A",
+      Back: 22,
+      Lay: 23,
+    },
+    {
+      name: "Player B",
+      Back: 12,
+      Lay: 23,
+    }
+  ]
+
+  handleBet(index:number){
+     this.isBetActive = !this.isBetActive
+     this.selectedPlayerIndex = index;
+     
+  }
+
+  toggleGameView() {
+    this.isGameActive = !this.isGameActive;
+  }
+}

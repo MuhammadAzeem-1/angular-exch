@@ -1,0 +1,386 @@
+<section class="gaming-section">
+  <div class="game-section">
+    <div>
+      <!-- game -->
+    </div>
+  </div>
+
+  @if (isGameActive) {
+  <div class="game-player-section">
+    <div class="game-player-section-a">
+      <div class="game-player-section-a-a">
+        <p>Classic view</p>
+        <label class="switch" (click)="toggleGameView()">
+          <input type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+      <div class="game-player-section-a-b">
+        <div class="game-player-content-heading">
+          <p>MIN: 100 | MAX100</p>
+        </div>
+        <div class="game-player-content-heading-2">
+          <p>BACK</p>
+          <p>LAY</p>
+        </div>
+      </div>
+      <div class="game-player-content-img">
+        <img src="../../../assets/horizontal-line.svg" alt="" />
+      </div>
+    </div>
+    <!--  -->
+    <div *ngFor="let item of playerData;  let i = index">
+    <div class="game-player-section-b">
+      <div class="game-player-section-content">
+        <div class="game-player-section-content-div">
+          <div class="game-player-div-2">
+            <p>{{item.name}}</p>
+          </div>
+
+          <div class="game-player-section-content-2">
+            <p (click)="handleBet(i)">{{item.Back}}</p>
+            <p>{{item.Lay}}</p>
+          </div>
+        </div>
+
+        <!-- ------------------------------------------------------ -->
+        <!-- ------------------------------------------------------ -->
+        <!-- ------------------------------------------------------ -->
+        @if (selectedPlayerIndex === i && isBetActive) {
+        <div class="bet-place-section" >
+          <div class="bet-place-section-1">
+              <button>+100</button>
+              <button>+500</button>
+              <button>+1k</button>
+              <button>+5k</button>
+              <button>+10k</button>
+              <button>+25</button>
+          </div>
+          <div class="bet-place-section-2"> 
+              <div class="bet-place-section-2-a bet-place-section-2-flex">
+                 <p>Odds: <span>2.15</span></p>
+                 <p>Profit: <span>2.15</span></p>
+              </div>
+              <div class="bet-place-section-2-b bet-place-section-2-flex">
+                <p>Max: <span>2.15</span></p>
+                <p>Stale <span><input type="text" placeholder="Min: 100, Max:55000"/></span></p>
+             </div>
+
+             <div class="bet-place-section-2-c bet-place-section-2-flex">
+              <button>Place Bet</button>
+              <button class="cross" (click)="handleBet(i)"><fa-icon [icon]="faXmark" style="color: #fe5e5e"></fa-icon></button>
+           </div>
+          </div>
+        </div>
+
+        <!-- <div class="bet-place-mobile-view" >
+
+          <div class="bet-place-mobile-view-a">
+             <p>Odds: <span>2.15</span></p>
+             <p>Stalke <span><input type="text" placeholder="Min: 100, Max:55000"/></span></p>
+          </div>
+
+          <div class="bet-place-mobile-view-b">
+              <button>+100</button>
+              <button>+500</button>
+              <button>+1k</button>
+              <button>+5k</button>
+              <button>+10k</button>
+              <button>+25</button>
+          </div>
+          <div class="bet-place-mobile-view-c"> 
+              <div>
+                
+                 <p>Profit: <span>2.15</span></p>
+                 <p>Min: 100</p>
+                 <p>Max: 55000</p>
+              </div>
+
+              <div class="bet-place-mobile-view-d">
+                <button>Place Bet</button>
+                <button class="cross" (click)="handleBet(i)"><fa-icon [icon]="faXmark" style="color: #fe5e5e"></fa-icon></button>
+            </div>
+          </div>
+        </div> -->
+        }
+
+      </div>
+        <!-- ------------------------------------------------------ -->
+        <!-- ------------------------------------------------------ -->
+        <!-- ------------------------------------------------------ -->
+
+      
+      </div>
+
+     
+    </div>
+  </div>
+  } @else {
+    <div class="toogle-second-section">
+        <div class="toogle-second-section-1 ">
+          
+          <div class="mobile-view-width">
+            <div class="mobile-view-flex desktop-view-flex">
+              <div class="toogle-second-section-1-a">
+                <p>Classic View</p>
+                <label class="switch" (click)="toggleGameView()">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                </label>
+              </div>
+            
+        
+            <div class="toogle-second-section-1-b">
+                <div>
+                    <p>Last Win</p>
+                    <p style="color: white;">0</p>
+                </div>
+                <div>
+                    <p>Total Bet</p>
+                    <p style="color: white;">0</p>
+                </div>
+            </div>
+
+            <div class="toogle-second-section-1-c chip-display">
+                 <div class="chip">
+                  <div class="chip-section">
+                    <img src="../../../assets/red-chip.svg" alt="">
+                    <p>100</p>
+                </div>
+
+                <div class="chip-section">
+                    <img src="../../../assets/maroon-chip.svg" alt="">
+                    <p>500</p>
+                </div>
+
+                <div class="chip-section">
+                    <img src="../../../assets/green-chip.svg" alt="">
+                    <p>1K</p>
+                </div>
+
+                <div class="chip-section">
+                    <img src="../../../assets/blue-chip.svg" alt="">
+                    <p>5k</p>
+                </div>
+
+                <div class="chip-section">
+                    <img src="../../../assets/purple.chip.svg" alt="">
+                    <p>10k</p>
+                </div>
+
+                <div class="chip-section">
+                    <img src="../../../assets/pink-chip.svg" alt="">
+                    <p>25k</p>
+                </div>
+
+                 </div>
+                
+            </div>
+
+            <div class="toogle-second-section-1-d">
+                <button class="toogle-second-section-1-d-btn">
+                    <img src="../../../assets/undo-icon.svg" alt="arr">
+                    <p>UNDO</p>
+                </button>
+
+                <button class="toogle-second-section-1-d-btn">
+                    <img src="../../../assets/reset-icon.svg" alt="arr">
+                    <p>RESET</p>
+                </button>
+            </div>
+            </div>
+            <div class="chip-display-mobile-section">
+            <div class="toogle-second-section-1-c chip-display-mobile">
+              <div class="chip">
+               <div class="chip-section">
+                 <img src="../../../assets/red-chip.svg" alt="">
+                 <p>100</p>
+             </div>
+
+             <div class="chip-section">
+                 <img src="../../../assets/maroon-chip.svg" alt="">
+                 <p>500</p>
+             </div>
+
+             <div class="chip-section">
+                 <img src="../../../assets/green-chip.svg" alt="">
+                 <p>1K</p>
+             </div>
+
+             <div class="chip-section">
+                 <img src="../../../assets/blue-chip.svg" alt="">
+                 <p>5k</p>
+             </div>
+
+             <div class="chip-section">
+                 <img src="../../../assets/purple.chip.svg" alt="">
+                 <p>10k</p>
+             </div>
+
+             <div class="chip-section">
+                 <img src="../../../assets/pink-chip.svg" alt="">
+                 <p>25k</p>
+             </div>
+
+              </div>
+            </div>
+          </div>
+            
+
+            
+             
+         </div>
+
+
+        </div>
+
+        <div class="toogle-second-section-2 none">
+               <div class="toogle-second-section-2-player">
+                    <p>PLAYER A</p>
+                    <p>PLAYER B</p>
+               </div>
+                 
+
+               <div class="toogle-second-section-2-score">
+                  <div class="toogle-second-section-2-score-a">
+
+                    <div class="toogle-second-section-2-score-b">
+                        <p>BACK</p>
+                        @if (isDataActive) {
+                          <p>22</p>
+                        }@else{
+                          <img src="../../../assets/lock.png" alt="img" class="lock-image">
+                        }
+                        
+                    </div>
+                    <div class="toogle-second-section-2-score-c">
+                        <p>LAY</p>
+                        @if (isDataActive) {
+                          <p>22</p>
+                        }@else{
+                          <img src="../../../assets/lock.png" alt="img" class="lock-image">
+                        }
+                    </div>
+                    
+                  </div>
+
+                  <div class="line"></div>
+
+                  <div class="toogle-second-section-2-score-d">
+                    <div class="toogle-second-section-2-score-b">
+                        <p>BACK</p>
+                        @if (isDataActive) {
+                          <p>22</p>
+                        }@else{
+                          <img src="../../../assets/lock.png" alt="img" class="lock-image">
+                        }
+                    </div>
+                    <div class="toogle-second-section-2-score-c">
+                        <p>LAY</p>
+                        @if (isDataActive) {
+                          <p>22</p>
+                        }@else{
+                          <img src="../../../assets/lock.png" alt="img" class="lock-image">
+                        }
+                    </div>
+                  </div>
+                    
+                  
+
+                  
+               </div>
+        </div>
+
+        <div class="toogle-second-section-2 toogle-section-2-mobile ">
+
+          
+          <div class="toogle-second-section-2-player " >
+               <p>PLAYER A</p>
+               
+               <div class="toogle-second-section-2-player-mobile ">
+                <div class="toogle-second-section-2-score-b">
+                  <p>BACK</p>
+                  @if (isDataActive) {
+                    <p>22</p>
+                  }@else{
+                    <img src="../../../assets/lock.png" alt="img" class="lock-image">
+                  }
+                  
+              </div>
+              <div class="toogle-second-section-2-score-c">
+                  <p>LAY</p>
+                  @if (isDataActive) {
+                    <p>22</p>
+                  }@else{
+                    <img src="../../../assets/lock.png" alt="img" class="lock-image">
+                  }
+              </div>
+               </div>
+          </div>
+
+          <div class="toogle-second-section-2-player">
+            <p>PLAYER B</p>
+            
+            <div class="toogle-second-section-2-player-mobile ">
+             <div class="toogle-second-section-2-score-b">
+               <p>BACK</p>
+               @if (isDataActive) {
+                 <p>22</p>
+               }@else{
+                 <img src="../../../assets/lock.png" alt="img" class="lock-image">
+               }
+               
+           </div>
+           <div class="toogle-second-section-2-score-c">
+               <p>LAY</p>
+               @if (isDataActive) {
+                 <p>22</p>
+               }@else{
+                 <img src="../../../assets/lock.png" alt="img" class="lock-image">
+               }
+           </div>
+            </div>
+       </div>
+            
+           <!-- <div>  
+            
+            <div>
+              <p>Player B</p>
+            </div>
+             <div class="toogle-second-section-2-score toogle-second-section-2-player">
+           
+
+             
+
+             <div class="toogle-second-section-2-score-d">
+               <div class="toogle-second-section-2-score-b">
+                   <p>BACK</p>
+                   @if (isDataActive) {
+                     <p>22</p>
+                   }@else{
+                     <img src="../../../assets/lock.png" alt="img" class="lock-image">
+                   }
+               </div>
+               <div class="toogle-second-section-2-score-c">
+                   <p>LAY</p>
+                   @if (isDataActive) {
+                     <p>22</p>
+                   }@else{
+                     <img src="../../../assets/lock.png" alt="img" class="lock-image">
+                   }
+               </div>
+             </div>
+               
+             
+
+             
+          </div>
+           </div> -->
+         
+   </div>
+
+        
+    </div>
+  }
+</section>

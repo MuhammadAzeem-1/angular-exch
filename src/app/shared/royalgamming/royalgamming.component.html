@@ -1,0 +1,78 @@
+
+<section class="royal-section">
+
+    <div class="royal-header-section">
+      <div class="royal-header-section-a">
+           <img src="../../../assets/lobby-icon.e7554e1bd993e73e435d8e20b5c9ae5f.svg" alt="lobby icon">
+           <p>Lobby</p>
+      </div>
+
+      <div class="royal-header-section-b">
+           <img src="../../../assets/games-logo.svg" alt="image">
+      </div>
+    </div>
+
+    <div class="tab-search-section">
+        <div class="tab-section" >
+            <button (click)="selectCategory('Category1')" >Papular Games ({{arrayLength1}})</button>
+            <button (click)="selectCategory('Category2')" style="background: #cf8d2e;">Dealer Games ({{arrayLength2}})</button>
+            <button (click)="selectCategory('Category3')">Virtual Games ({{arrayLength3}})</button>
+        </div>
+
+        <!-- <div class="tab-section" *ngFor="let category of categories">
+            <button (click)="selectCategory('Category1')" [ngClass]="{ 'selected': category === selectedCategory }">{{category.name}}({{arrayLength1}})</button>
+            <button (click)="selectCategory('Category2')">Dealer Games({{arrayLength2}})</button>
+            <button (click)="selectCategory('Category3')">Virtual Games({{arrayLength3}})</button>
+        </div> -->
+
+        <div class="search-container">
+            <input type="text" placeholder="Search Game" class="search-input">
+            <button class="search-button">
+                <fa-icon [icon]="faMagnifyingGlass" style="color: #515151"></fa-icon>
+            </button>
+        </div>
+    </div>
+
+    <!-- Game Cards -->
+    <div class="royal-games-cards">
+        <div class="royal-games-card-section" >
+            <div class="card" *ngFor="let item of categoryContent">
+              
+                <img src="../../../assets/demo.png" alt="image" >
+
+                <div class="card-content">
+                    <p>{{item.name}}</p>
+                    <div class="card-content-member">
+                        <img src="../../../assets/member-icon.svg" alt="member icon">
+                        <p style="font-weight: 600;">{{item.score}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="card">
+              
+                <img src="../../../assets/demo.png" alt="image" >
+
+                <div class="card-content">
+                    <p>Race to 17A</p>
+                    <p>168</p>
+                </div>
+            </div>
+
+            <div class="card">
+              
+                <img src="../../../assets/demo.png" alt="image" >
+
+                <div class="card-content">
+                    <p>Race to 17A</p>
+                    <div>
+                        <img src="../../../assets/member-icon.svg" alt="member icon">
+                        <p>168</p>
+                    </div> 
+                    
+                </div>
+            </div> -->
+        </div>
+        
+    </div>
+</section>

@@ -14,7 +14,7 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './gaming-section.component.css'
 })
 export class GamingSectionComponent {
-  isGameActive : boolean = false;
+  isGameActive : boolean = true;
   isDataActive: any = false;
   isBetActive: any = false;
   selectedPlayerIndex: number | null = null
@@ -42,6 +42,11 @@ export class GamingSectionComponent {
   }
 
   toggleGameView() {
+    console.log(this.isGameActive);
+    
     this.isGameActive = !this.isGameActive;
+    console.log(this.isGameActive);
+    
+    
   }
 }

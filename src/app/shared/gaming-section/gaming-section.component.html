@@ -7,16 +7,19 @@
 
   @if (isGameActive) {
   <div class="game-player-section">
+    
     <div class="game-player-section-a">
       <div class="game-player-section-a-a">
-        <p>Classic view</p>
-        <label class="switch" (click)="toggleGameView()">
-          <input type="checkbox" />
-          <span class="slider round"></span>
-        </label>
-      </div>
+          <p>Classic view</p>
+          <label class="switch" (click)="toggleGameView()">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </div>
 
-      <div class="game-player-section-a-b">
+      <div class="game-player-section-a-b" >
+        
+
         <div class="game-player-content-heading">
           <p>MIN: 100 | MAX100</p>
         </div>
@@ -35,11 +38,18 @@
       <div class="game-player-section-content">
         <div class="game-player-section-content-div">
           <div class="game-player-div-2">
+            
             <p>{{item.name}}</p>
           </div>
 
           <div class="game-player-section-content-2">
-            <p (click)="handleBet(i)">{{item.Back}}</p>
+            @if(isDataActive){
+              <p (click)="handleBet(i)">{{item.Back}}</p>
+            }@else {
+              <p><img src="../../../assets/lock.png" alt="img" class="lock-image"></p>
+              
+            }
+            
             <p>{{item.Lay}}</p>
           </div>
         </div>
@@ -48,7 +58,7 @@
         <!-- ------------------------------------------------------ -->
         <!-- ------------------------------------------------------ -->
         @if (selectedPlayerIndex === i && isBetActive) {
-        <div class="bet-place-section" >
+        <div class="bet-place-section none" >
           <div class="bet-place-section-1">
               <button>+100</button>
               <button>+500</button>
@@ -73,15 +83,13 @@
            </div>
           </div>
         </div>
-
-        <!-- <div class="bet-place-mobile-view" >
-
-          <div class="bet-place-mobile-view-a">
-             <p>Odds: <span>2.15</span></p>
-             <p>Stalke <span><input type="text" placeholder="Min: 100, Max:55000"/></span></p>
-          </div>
-
-          <div class="bet-place-mobile-view-b">
+        <!-- ************************ -->
+        <div class="bet-place-section chip-display-mobile" >
+           <div class="bet-place-section-1-mobile">
+                 <p>Odds: <span>2.15</span></p>
+                 <p class="bet-place-section-1-mobile-input">Stale <span><input type="text" placeholder="Min: 100, Max:55000"/></span></p>
+              </div>
+          <div class="bet-place-section-2-mobile">
               <button>+100</button>
               <button>+500</button>
               <button>+1k</button>
@@ -89,26 +97,22 @@
               <button>+10k</button>
               <button>+25</button>
           </div>
-          <div class="bet-place-mobile-view-c"> 
-              <div>
-                
-                 <p>Profit: <span>2.15</span></p>
-                 <p>Min: 100</p>
-                 <p>Max: 55000</p>
-              </div>
-
-              <div class="bet-place-mobile-view-d">
-                <button>Place Bet</button>
-                <button class="cross" (click)="handleBet(i)"><fa-icon [icon]="faXmark" style="color: #fe5e5e"></fa-icon></button>
-            </div>
+          <div class="bet-place-section-3-mobile"> 
+             <p>Profit 0.00</p>
+             <p>Min. 100</p>
+             <p>Max. 550000</p>
           </div>
-        </div> -->
+
+            <div class="bet-place-section-4-mobile">
+              <button (click)="handleBet(i)">Cancel</button>
+              <button >Place Bet</button>
+            </div>
+          
+        </div>
+
         }
 
       </div>
-        <!-- ------------------------------------------------------ -->
-        <!-- ------------------------------------------------------ -->
-        <!-- ------------------------------------------------------ -->
 
       
       </div>
@@ -117,16 +121,25 @@
     </div>
   </div>
   } @else {
-    <div class="toogle-second-section">
+    
+    <div class="toogle-second-section" >
+
         <div class="toogle-second-section-1 ">
-          
+
+          <!-- <div class="game-player-section-a-a">
+            <p>Classic view</p>
+            <label class="switch" (click)="toggleGameView()">
+              <input type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+          </div> -->
           <div class="mobile-view-width">
-            <div class="mobile-view-flex desktop-view-flex">
+            <div class="mobile-view-flex desktop-view-flex" >
               <div class="toogle-second-section-1-a">
                 <p>Classic View</p>
                 <label class="switch" (click)="toggleGameView()">
                     <input type="checkbox" />
-                    <span class="slider round"></span>
+                    <span class="slider1 round1"></span>
                 </label>
               </div>
             
@@ -383,4 +396,5 @@
         
     </div>
   }
+
 </section>

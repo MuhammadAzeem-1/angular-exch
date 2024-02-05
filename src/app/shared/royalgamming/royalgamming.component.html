@@ -14,9 +14,9 @@
 
     <div class="tab-search-section">
         <div class="tab-section" >
-            <button (click)="selectCategory('Category1')" >Papular Games ({{arrayLength1}})</button>
-            <button (click)="selectCategory('Category2')" style="background: #cf8d2e;">Dealer Games ({{arrayLength2}})</button>
-            <button (click)="selectCategory('Category3')">Virtual Games ({{arrayLength3}})</button>
+            <button (click)="selectCategory('Category1')"  [ngStyle]="{'background-color': selectedCategory === 'Category1' ? '#cf8d2e' : ''}">Papular Games ({{arrayLength1}})</button>
+            <button (click)="selectCategory('Category2')" [ngStyle]="{'background-color': selectedCategory === 'Category2' ? '#cf8d2e' : ''}">Dealer Games ({{arrayLength2}})</button>
+            <button (click)="selectCategory('Category3')" [ngStyle]="{'background-color': selectedCategory === 'Category3' ? '#cf8d2e' : ''}">Virtual Games ({{arrayLength3}})</button>
         </div>
 
         <!-- <div class="tab-section" *ngFor="let category of categories">

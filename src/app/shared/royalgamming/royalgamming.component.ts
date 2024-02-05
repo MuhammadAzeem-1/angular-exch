@@ -123,7 +123,7 @@ export class RoyalgammingComponent {
     // ]
 
 
-  selectedCategory: string = '';
+  selectedCategory: string = 'Category2';
   
   categoryContent: any = this.cardArray; 
   arrayLength1: any = this.cardArray.length

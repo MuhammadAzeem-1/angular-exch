@@ -617,7 +617,7 @@
   }
 
   .game-player-section{
-    width: 96%;
+    width: 94%;
     padding: 5px  ;
   }
 
@@ -904,5 +904,23 @@
     width: 22rem;
     height: 17rem;
   }
+
+}
+
+@media (min-width: 1440px) {
+  .game-section{
+    width: 40rem;
+    height: 17rem;
+  }
+
+  .toogle-second-section{
+    width: 40rem;
+  }
+
+  .desktop-view-flex{
+    gap: 0.8rem;
+ 
+  }
+  
 
 }

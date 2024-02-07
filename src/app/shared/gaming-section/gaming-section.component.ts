@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
@@ -20,6 +20,8 @@ import LockIcon from '@mui/icons-material/Lock';
 
 })
 export class GamingSectionComponent {
+
+
   isGameActive : boolean = true;
   isDataActive: any = true;
   isBetActive: any = false;

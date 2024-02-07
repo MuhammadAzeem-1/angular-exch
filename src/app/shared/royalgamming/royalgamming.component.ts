@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
@@ -17,6 +17,8 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 })
 
 export class RoyalgammingComponent {
+
+
 
 
   faMagnifyingGlass = faMagnifyingGlass;

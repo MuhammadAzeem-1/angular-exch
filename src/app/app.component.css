@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@100;200;300;400;500&display=swap');
+
 
 .nav{
     display: inline-flex;
@@ -14,7 +16,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 7px;
+    padding: 6px;
     background-color: none;
     background: none;
     border: none;
@@ -35,7 +37,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 3px;
+    gap: 2px;
 }
 
 .nav-username img{
@@ -45,10 +47,9 @@
 .nav-username p{
     padding-right: 6px;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 13px;
     padding-right: 6px;
     font-family: 'Roboto Condensed', sans-serif;
-    letter-spacing: -1px;
 }
 
 

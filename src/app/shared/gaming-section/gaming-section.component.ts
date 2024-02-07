@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { FormsModule } from '@angular/forms';
 import LockIcon from '@mui/icons-material/Lock';
 
 
@@ -10,7 +11,8 @@ import LockIcon from '@mui/icons-material/Lock';
   standalone: true,
   imports: [
     FontAwesomeModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   templateUrl: './gaming-section.component.html',
   styleUrl: './gaming-section.component.css',
@@ -19,7 +21,7 @@ import LockIcon from '@mui/icons-material/Lock';
 })
 export class GamingSectionComponent {
   isGameActive : boolean = true;
-  isDataActive: any = false;
+  isDataActive: any = true;
   isBetActive: any = false;
   selectedPlayerIndex: number | null = null
 

@@ -55,6 +55,7 @@
 
 .app-main{
     border: 2px solid grey;
+    border-top: 1px solid #9d7f2e;
     padding: 2rem;
     background-color: black;
     height: 100%;

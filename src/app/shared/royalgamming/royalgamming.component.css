@@ -140,8 +140,10 @@
     color: hsla(0,0%,100%,.5);
     font-size: 17px;
     font-weight: 500;
-    
+  }
 
+  input:focus::placeholder{
+    color: #cf8d2e;
   }
 
   input:focus{
@@ -150,6 +152,7 @@
   }
 
   .search-input:focus {
+    /* color: #cf8d2e; */
     /* background: transparent;
     
     border: 1px solid red; */

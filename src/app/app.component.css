@@ -25,10 +25,19 @@
     width: 6rem;
 }
 
+.house-img{
+    width: 1rem!important;
+}
+
 .nav-username{
     display: flex;
     align-items: center;
     flex-direction: row;
+    gap: 3px;
+}
+
+.nav-username img{
+    width: 1rem;
 }
 
 .nav-username p{
@@ -91,6 +100,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        gap: 1rem;
       
     }
 
@@ -100,7 +110,7 @@
     }
 
     .mobile-nav-section-2-a{
-        border: 0.5px solid #fff;
+        border: 1px solid #525252;
         border-radius: 4px;
         display: flex;
         align-items: center;
@@ -124,6 +134,14 @@
 
     .mobile-nav-section-1{
         font-size: 21px;
+    }
+
+    .desktop-darkMode{
+        display: none;
+    }
+
+    .mobile-mode img{
+        width: 1.5rem;
     }
 
     

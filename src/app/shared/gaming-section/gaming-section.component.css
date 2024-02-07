@@ -1,27 +1,29 @@
 .gaming-section{
-  margin-left: 1rem;
+  margin-left: 0.8rem;
 }
 
 .game-section{
   background-color: #1d1212;
-  width: 44rem;
+  width: 41rem;
   height: 30rem;
 }
 
 .game-player-section{
-    margin-top: 1rem;
+    margin-top: 0.7rem;
     border-radius: 5px;
     background-image: url("https://rg-assests.royalgaming.online/common/odds-bg-dark.svg");
     background-color: #222;
     padding: 4px;
+    padding-bottom: 10px;
 }
 
 .game-player-section-a-a{
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   gap: 0.5rem;
   color: #cf8d2e;
-  font-size: 10px;
+  font-size: 11px;
   text-transform: uppercase;
   font-family: Roboto Condensed,sans-serif;
   padding-left: 14px;
@@ -39,7 +41,7 @@
 }
 
 .game-player-content-heading {
-  width: 68%;
+  width: 61%;
   margin-top: 4px;
 }
 
@@ -80,7 +82,12 @@
 .game-player-content-img{
     display: flex;
     justify-content: center;
-    margin-bottom: 0.4rem;
+    margin-bottom: 10px;
+    margin-top: 2px;
+}
+
+.game-player-section-b{
+  margin-bottom: 1px;
 }
 
 /* checkbox css */
@@ -211,14 +218,16 @@
 
 /* *********************************************** */
 .game-player-section-content-div{
-    display: flex;
-    align-items: center;
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg,#464646,#0f0f0f);
-    background-color: lightblue;
-    border-radius: 5px;
-    margin-left: 19px;
-    padding: 4px 2px;
+  display: flex;
+  align-items: center;
+  background: rgb(2, 0, 36);
+  background: linear-gradient( 180deg, #464646, #0f0f0f);
+  background-color: lightblue;
+  border-radius: 5px;
+  margin-left: 20px;
+  padding: 4px 2px;
+  margin-right: 20px;
+  margin-bottom: 2px;
 }
 
 .game-player-section-content-div p{
@@ -226,7 +235,7 @@
 }
 
 .game-player-div-2{
-  width: 59%;
+  width: 53%;
   padding-left: 5px;
   color: white;
   font-family: Roboto Condensed, sans-serif;
@@ -282,13 +291,15 @@
   background-image: url(https://rg-assests.royalgaming.online/common/odds-bg-dark.svg);
   background-color: #222;
   border-radius: 6px;
+  padding: 6px 1px;
 }
 
 .toogle-second-section-1{
   display: flex;
-    justify-content: space-evenly;
-    color: #b97f2b;
-    align-items: center;
+  justify-content: center;
+  color: #b97f2b;
+  align-items: center;
+
 }
 
 .toogle-second-section-1-a{
@@ -297,17 +308,19 @@
   align-items: center;
   flex-direction: column;
   font-family: Roboto Condensed,sans-serif;
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 400;
+  text-transform: uppercase;
+  gap: 3px;
 }
 
 .desktop-view-flex{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   color: #b97f2b;
   align-items: center;
-  gap: 1.8rem;
-  padding: 5px;
+  gap: 2.2rem;
+
 }
 
 .toogle-second-section-1-b{
@@ -333,14 +346,31 @@
 .toogle-second-section-1-d{
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 5px;
+}
+
+.toogle-second-section-1-d-btn-1{
+  background-color: black;
+  border: 1px solid #cf8d2e;
+  padding: 5px;
+  border-radius: 6px;
+  color: white;
+  font-family: Roboto Condensed,sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.toogle-second-section-1-d-btn-1 img{
+  height: 0.8rem;
+  width: 76%;
 }
 
 .toogle-second-section-1-d-btn{
   background-color: black;
   border: 1px solid #cf8d2e;
-  padding: 5px;
-  border-radius: 12px;
+  padding: 3px;
+  border-radius: 6px;
   color: white;
   font-family: Roboto Condensed,sans-serif;
   font-size: 8px;
@@ -355,13 +385,16 @@
 
 /* image section */
 .toogle-second-section-1-c{
-  display: flex;
-  flex-direction: row;
-  width: 18rem;
-  background-color: black;
-  border-radius: 22px;
-  border: 1px solid white;
-  padding: 5px 3px;
+  background-image: linear-gradient(180deg,#000,#000),linear-gradient(270deg,#000,hsla(0,0%,82%,0),#ececec);
+    background-clip: padding-box,border-box;
+    background-origin: border-box;
+    border: 1.7px double transparent;
+    border-radius: 100px;
+    position: relative;
+    text-align: left;
+    width: 15rem;
+    padding: 1% 3px;
+    height: 31px;
 }
 
 .chip{
@@ -385,7 +418,7 @@
 }
 
 .chip-section img{
-  width: 100%;
+  width: 109%;
   opacity: 0.7;
   
 }
@@ -410,27 +443,28 @@
   color: black;
   font-size: 10px;
   border-radius: 10px;
-  margin: 0.3rem 1rem
+  margin: 0.3rem 10px
 }
 
 .line{
   border-left: 1px solid rgba(207,141,46,.35);
   height: auto;
   min-height: 35px;
-  padding: 0px 6px;
+  margin: 1px 10px;
 }
 
 .toogle-second-section-2-player{
   display: flex;
   width: 100%;
   justify-content: center;
-  gap: 10rem;
+  gap: 15rem;
   font-family: Roboto Condensed,sans-serif;
   font-weight: 600;
+  padding-bottom: 6px;
 }
 
 .toogle-second-section-2-player p{
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
   color: white;
 }
@@ -439,21 +473,23 @@
   background: linear-gradient(180deg,#5a3b0d,#130f0f);
   border: 1px solid rgba(207,141,46,.35);
   border-radius: 5px;
-  padding: 5px 13px;
+  padding: 5px 30px;
   display: flex;
+  justify-content: center;
+ 
 }
 
 .toogle-second-section-2-score-a{
   display: flex;
   justify-content: center;
-  width: 50%;
+  width: 48%;
   gap: 0.8rem;
 }
 
 .toogle-second-section-2-score-b{
   background-color: #72bbef;
   border: 0.5px solid white;
-  border-radius: 5px;
+  border-radius: 9px;
   font-size: 12px;
   font-weight: 600;
   display: flex;
@@ -468,7 +504,7 @@
 .toogle-second-section-2-score-c{
   background-color: #faa9ba;
   border: 0.5px solid white;
-  border-radius: 5px;
+  border-radius: 9px;
   font-size: 12px;
   font-weight: 600;
   display: flex;
@@ -484,7 +520,7 @@
   display: flex;
   gap: 1rem;
   justify-content: center;
-  width: 50%;
+  width: 48;
 }
 
 .lock-image{
@@ -756,7 +792,7 @@
     180deg,
     #5a3b0d,
     #130f0f);
-    padding: 5px;
+    padding: 6px 16px;
     gap: 0.8rem;
 
 }
@@ -896,6 +932,16 @@
   width: 70%;
 }
 
+.game-player-div-2{
+  width: 57%;
+}
+
+.toogle-second-section-2-score-b{
+  
+  width: 9rem;
+
+}
+
 
 
 }
@@ -909,18 +955,14 @@
 
 @media (min-width: 1440px) {
   .game-section{
-    width: 40rem;
-    height: 17rem;
+    width: 41rem;
+    height: 25rem;
   }
 
   .toogle-second-section{
-    width: 40rem;
+    width: 40.89rem;
   }
 
-  .desktop-view-flex{
-    gap: 0.8rem;
- 
-  }
   
 
 }
